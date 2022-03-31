@@ -8,7 +8,7 @@ function My_Cart () {
     <div className='cartBackground bg-light  rounded w-50 mx-auto'>
       <div className='cartEl'>
         <ul>
-          {Cart ? (
+          {Cart.length>0 ? (
             Cart.map(item => {
               return (
                 <li className='list-unstyled my-3'>
@@ -37,7 +37,7 @@ function My_Cart () {
               )
             })
           ) : (
-            <li className='text-red-600'>Cart Is Not Added Yet</li>
+            <li className='text-danger list-unstyled'>Cart Is Not Added Yet</li>
           )}
         </ul>
       </div>
